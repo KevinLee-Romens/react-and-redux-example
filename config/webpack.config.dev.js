@@ -26,7 +26,7 @@ module.exports = {
   // See the discussion in https://github.com/facebookincubator/create-react-app/issues/343.
   // chrome 某些版本不支持在下一行的配置模式下断点调试，暂用inline代替cheap-module
   devtool : 'cheap-module-eval-source-map',
-  // devtool : 'eval',
+  // devtool: 'inline-eval-source-map',
   // These are the "entry points" to our application.
   // This means they will be the "root" imports that are included in JS bundle.
   // The first two entry points enable "hot" CSS and auto-refreshes for JS.
@@ -78,7 +78,6 @@ module.exports = {
     alias      : {
       Actions        : paths.appSrcActions,
       Components     : paths.appSrcComponents,
-      Constants      : paths.appSrcConstants,
       Config         : paths.config,
       Router         : paths.appSrcRouter,
       Stores         : paths.appSrcStores,
@@ -178,8 +177,7 @@ module.exports = {
       },
       {
         test   : /\.less$/,
-        loader : 'style!css!postcss!less',
-        // loader: 'style!css!postcss!less?{modifyVars:{"@primary-color":"#1DA57A"}}'
+        loader : 'style!css!postcss!less?{modifyVars:{"@primary-color":"#1DA57A"}}',
       },
 
       // JSON is not enabled by default in Webpack but both Node and Browserify

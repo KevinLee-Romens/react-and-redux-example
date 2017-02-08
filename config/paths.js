@@ -1,9 +1,9 @@
-const path = require('path');
-const fs = require('fs');
+var path = require('path');
+var fs = require('fs');
 
 // Make sure any symlinks in the project folder are resolved:
 // https://github.com/facebookincubator/create-react-app/issues/637
-const appDirectory = fs.realpathSync(process.cwd());
+var appDirectory = fs.realpathSync(process.cwd());
 function resolveApp(relativePath) {
   return path.resolve(appDirectory, relativePath);
 }
@@ -23,7 +23,7 @@ function resolveApp(relativePath) {
 // Otherwise, we risk importing Node.js core modules into an app instead of Webpack shims.
 // https://github.com/facebookincubator/create-react-app/issues/1023#issuecomment-265344421
 
-const nodePaths = (process.env.NODE_PATH || '')
+var nodePaths = (process.env.NODE_PATH || '')
   .split(process.platform === 'win32' ? ';' : ':')
   .filter(Boolean)
   .filter(folder => !path.isAbsolute(folder))
@@ -47,7 +47,6 @@ module.exports = {
   config           : resolveApp('config'),
   appSrcActions    : resolveApp('src/actions'),
   appSrcComponents : resolveApp('src/components'),
-  appSrcConstants  : resolveApp('src/constants'),
   appSrcRouter     : resolveApp('src/router'),
   appSrcStyles     : resolveApp('src/styles'),
   appSrcStores     : resolveApp('src/stores'),

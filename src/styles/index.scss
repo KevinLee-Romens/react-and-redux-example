@@ -1,4 +1,9 @@
 @import "./normalize.scss";
-@import "./public.scss";
-@import "./app.scss";
-@import "./tabs.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+
