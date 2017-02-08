@@ -2,6 +2,8 @@ import React from 'react';
 import { Router, Route, hashHistory, IndexRedirect } from 'react-router';
 import App from 'Components/layout/App';
 import PartOne from 'Components/part1';
+import Chapter8 from 'Components/part1/chapter8';
+import Chapter9 from 'Components/part1/chapter9';
 import PartTwo from 'Components/part2';
 import PartThree from 'Components/part3';
 import PartFour from 'Components/part4';
@@ -22,8 +24,8 @@ const routes = (
           <Route path="chapter-five" component={PartOne} />
           <Route path="chapter-six" component={PartOne} />
           <Route path="chapter-seven" component={PartOne} />
-          <Route path="chapter-eight" component={PartOne} />
-          <Route path="chapter-nine" component={PartOne} />
+          <Route path="chapter-eight" component={Chapter8} />
+          <Route path="chapter-nine" component={Chapter9} />
         </Route>
         <Route path="part-two">
           <Route path="chapter-ten" component={PartTwo} />

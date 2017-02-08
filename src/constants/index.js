@@ -29,7 +29,7 @@ export const NAVIGATION = [
       path  : '/codes/part-one/chapter-eight',
     }, {
       title : '第9章',
-      path  : '/codes/part-one/chapter-night',
+      path  : '/codes/part-one/chapter-nine',
     }],
   },
   {
